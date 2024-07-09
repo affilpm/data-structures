@@ -43,8 +43,8 @@ def power(x, n):
     else:
         return x * power(x, n-1)
 
-# Example usage:
-print(power(2, 3))  # Output: 8
+
+print(power(2, 3)) 
                        
              
                   
@@ -63,23 +63,11 @@ print(fact(5))
 
 
 
-def summ(n):
-    if n == 0:
-        return 0
-    else:
-        return n % 10 + summ(n//10)    
-print(summ(13411)) 
 
 
 
 
-def power(x,n):
-    if n == 0:
-        return 1
-    else:
-        return x * power(x,n-1)
-    
-print(power(2,3))       
+  
 
 
 
