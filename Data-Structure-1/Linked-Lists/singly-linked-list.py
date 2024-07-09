@@ -127,19 +127,7 @@ class Linkedlist:
             
             
             
-    def del_dup(self):
-        if not self.head:
-            return
-        seen = set()
-        prev = None
-        current = self.head
-        while current:
-            if current.data in seen:
-                prev.next = current.next
-            else:
-                seen.add(current.data)
-                prev = current
-            current = current.next        
+        
             
             
             
@@ -160,22 +148,7 @@ class Linkedlist:
             
             
             
-    def del_d(self,x):
-        if self.head is None:
-            print("se")
-            return
-        if x == self.head.data:
-            self.head = self.head.next
-            return
-        n = self.head
-        while n.next is not None:
-            if x == n.next.data:
-                break
-            n = n.next
-        if n.next is None:
-            print('no node')
-        else:
-            n.next = n.next.next
+
             
                     
                 
@@ -207,7 +180,7 @@ LL1.add_begin(10)
 LL1.del_end()
 LL1.del_begin()
 LL1.add_before(3,1)
-LL1.del_d(4)
+LL1.del_by_val(1)
 # LL1.remove_duplicates()
 # LL1.reverse()
 
