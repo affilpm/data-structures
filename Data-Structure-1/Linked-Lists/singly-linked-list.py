@@ -4,10 +4,13 @@ class Node:
         self.next = None
         # self.pnext = None
         
+        
 class Linkedlist:
     def __init__(self):
         self.head = None
         
+        
+# print linked list        
     def print_LL(self):
         if self.head is None:
             print("LL is empty",)
@@ -18,7 +21,8 @@ class Linkedlist:
                 n = n.next
 
 
-#adding new node beginning 
+
+#adding new node at beginning 
     def add_begin(self,data):
         new_node = Node(data)
         new_node.next = self.head     
@@ -27,7 +31,7 @@ class Linkedlist:
         
         
 
- #adding new node end     
+#adding new node atend     
     def add_end(self, data):
         new_node = Node(data)
         if self.head is None:
@@ -39,7 +43,7 @@ class Linkedlist:
             n.next = new_node  
             
               
-                                 
+# adding new after a node                                 
     def add_after(self,data,x):
         n = self.head
         while n is not None:
@@ -54,6 +58,7 @@ class Linkedlist:
             n.next = new_node      
             
 
+# adding new node before a node
     def add_before(self,data,x):
         if self.head is None:
             print("LL is empty")
@@ -76,17 +81,21 @@ class Linkedlist:
             n.next = new_node
             
             
+# delete node at the beginning            
     def del_begin(self):
         if self.head is not None:
             self.head = self.head.next 
             
+            
+# delete node at the end           
     def del_end(self):
         n = self.head
         while n.next.next is not None:
             n = n.next
         n.next = None
         
-        
+     
+# delete note by searching value        
     def del_by_val(self,x):
         if self.head is None:
             print("Ll is empty")
@@ -109,7 +118,7 @@ class Linkedlist:
               
    
         
-       
+# remove duplicate node       
     def remove_duplicates(self):
         if not self.head:
             return
@@ -128,12 +137,7 @@ class Linkedlist:
             
             
         
-            
-            
-            
-    
-        
-        
+# reverse linked list    
     def reverse(self):
         prev = None
         current = self.head
@@ -146,13 +150,9 @@ class Linkedlist:
       
             
             
-            
-            
-
-            
-                    
+                     
                 
-            
+# convert array to linked list            
 def array_to_linked_list(arr):
     linked_list = Linkedlist()
     for item in arr:
