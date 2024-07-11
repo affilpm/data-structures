@@ -100,7 +100,7 @@ print(second_largest_number([1,2,7,4,6,5]))
 
 
 
-# print duplicates
+# find duplicates
 def duplicates(n):
     seen = []
     duplicate = []
