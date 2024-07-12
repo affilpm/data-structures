@@ -52,3 +52,24 @@ def binary_search2(arr, target):
             right = mid - 1
     return result  
 print(binary_search2([1,1,1,2,3,4,4,5], 1))
+
+
+
+
+
+
+def doubly_recursion(arr,target,left,right):
+    
+    if len(arr) <= 1:
+        return -1
+    
+    mid = left + (right - left) // 2
+    
+    if arr[mid] == target:
+        return mid
+    if arr[mid] < target:
+        return doubly_recursion(arr,target,mid + 1,right)
+    else:
+        return doubly_recursion(arr,target,left, mid - 1)
+array =  [1,2,3,4,4,5]  
+print(doubly_recursion(array, 3,0,len(array)-1))    
