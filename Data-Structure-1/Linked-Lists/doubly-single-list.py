@@ -78,7 +78,10 @@ class LinkedList:
                 new_node.prev = n
                 if n.next is not None:
                     n.next.prev = new_node
-                n.next = new_node        
+                n.next = new_node   
+                
+                
+                     
                                             
                 
 n = LinkedList()
