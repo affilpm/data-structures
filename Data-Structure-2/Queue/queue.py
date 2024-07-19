@@ -19,8 +19,15 @@ def display():
     else:
         print(queue)
         
+def display_rev():
+    if not queue:
+        print('queue is empty')
+    else:
+        print(queue[::-1])        
+        
+        
 while True:
-    print('choose a option 1.enqueue 2.dequeue 3.display 4.quit')
+    print('choose a option 1.enqueue 2.dequeue 3.display 4.reverse 5.quit')
     choice = int(input())
     if choice == 1:
         enqueue()
@@ -29,6 +36,8 @@ while True:
     elif choice == 3:
         display()
     elif choice == 4:
+        display_rev()
+    elif choice == 5:   
         break
     else:
         print('choose any of the mentioned options')
