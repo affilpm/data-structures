@@ -27,17 +27,20 @@ class HashTable:
                 del self.table[index][i]
                 return
             
+              
     def display_all(self):
         for i, bucket in enumerate(self.table):
             if bucket:
                 print(f"Bucket {i}: {bucket}")        
 
 ht = HashTable(10)
-ht.insert("ss", "2")
-ht.insert("key2", "35")
-print(ht.search("key2"))  
-ht.delete("key1")
-# print(ht.search("key1")) 
+ht.insert("one", "2")
+ht.insert("two", "35")
+ht.delete("two")
+
+ht.display_all()
+# print(ht.search("key"))  
+# print(ht.search("key")) 
     
         
         
