@@ -20,6 +20,7 @@ class Linkedlist():
             while n is not None:
                 print(n.data, end="-->")
                 n = n.next
+        print()        
 
 
 
@@ -215,7 +216,13 @@ class Linkedlist():
         self.head = prev    
       
             
-            
+    def sum_(self):
+        b = 0
+        n = self.head
+        while n is not None:      
+            b += n.data
+            n = n.next
+        return b      
                      
                 
 # convert array to linked list            
@@ -257,6 +264,7 @@ LL1.del_after(6)
 # LL1.reverse()
 
 
+print(LL1.sum_())
 LL1.print_LL()        
             
 
