@@ -15,7 +15,7 @@ def merge(left,right):
             sorted_arr.append(left[i])
             i += 1
         else:
-            sorted_arr.append(right[i]) 
+            sorted_arr.append(right[j]) 
             j += 1  
             
     sorted_arr.extend(left[i:])
