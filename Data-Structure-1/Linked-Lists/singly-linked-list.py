@@ -5,7 +5,7 @@ class Node:
         
       
         
-class Linkedlist:
+class Linkedlist():
     def __init__(self):
         self.head = None
         
