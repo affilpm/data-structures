@@ -32,7 +32,11 @@ while stack:
     elif choice == 3:
         stack.display()
     else:
-        print('choose from any 3')            
+        print('choose from any 3')  
+        
+        
+        
+        
         
    
         

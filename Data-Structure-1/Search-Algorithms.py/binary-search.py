@@ -11,7 +11,7 @@ def binary_search(arr, target):
     return -1
 
 h = [1,2,3,4,5,6]
-print(binary_search(h,5))            
+print(binary_search(h,5))    
 
 
 
@@ -53,6 +53,26 @@ def binary_search2(arr, target):
     return result  
 print(binary_search2([1,1,1,2,3,4,4,5], 1))
 
+
+
+
+# replace target
+def binary_search3(arr, target):
+    left,right = 0,len(arr)-1
+    n = []
+    while left <= right:
+        mid = left + (right - left)//2
+        if arr[mid] == target:
+            arr[mid] = 0
+            return arr
+        elif arr[mid] < target:
+            left = mid +1
+        else:
+            right = mid-1
+    return -1
+
+h = [1,2,3,4,5,6]
+print(binary_search3(h,3))    
 
 
 
