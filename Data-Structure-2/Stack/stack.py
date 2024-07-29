@@ -1,43 +1,38 @@
-stack = []
-def push():
-    if len(stack) == limit:
-        print("stack is full")
-    else:    
-        element = int(input("Enter the element:"))
-        stack.append(element)
-        print(element, 'added to the stack')
-    
-    
-def pop():
-    if not stack:
-        print('Stack is empty')
-    else:
-        element = stack.pop()
-        print("removed element", element)
+class stack():
+    def __init__(self) -> None:
+        self.element = []
         
-def display():
-    if not stack:
-        print('Stack is empty')
-    else:
-        print(stack)            
-            
-limit = int(input('enter limit of stack:')) 
-print(limit) 
-
-while True:
-    print('select the operation 1.push 2.pop 3.display 4.quit')
+    def push(self):
+        m = int(input('enter the element'))
+        self.element.append(m)
+        print(m,'added to list')
+        
+    def pop(self):
+        if not self.element:
+            print('stack is empty')
+        else:    
+            v = self.element.pop()
+            print(v, 'popped from stack')
+        
+    def display(self):
+        if not self.element:
+            print('empty')
+        else:    
+            print(self.element)    
+        
+        
+stack = stack()
+while stack:
+    print('choose any one of the option 1.push 2.pop 3.display')
     choice = int(input())
     if choice == 1:
-        push()
+        stack.push()
     elif choice == 2:
-        pop()
+        stack.pop()
     elif choice == 3:
-        display()
-    elif choice == 4:
-        break    
+        stack.display()
     else:
-        print('enter the correct operation')
-            
+        print('choose from any 3')            
         
-
-          
+   
+        
