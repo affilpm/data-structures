@@ -31,7 +31,17 @@ class HashTable:
     def display_all(self):
         for i, bucket in enumerate(self.table):
             if bucket:
-                print(f"Bucket {i}: {bucket}")        
+                print(f"Bucket {i}: {bucket}") 
+                
+                
+    def count(self,value):
+        count = 0
+        for bucket in self.table:
+            for i,v in bucket:
+                if v == value:
+                    count += 1
+        return count            
+                               
 
 ht = HashTable(10)
 ht.insert("one", "2")

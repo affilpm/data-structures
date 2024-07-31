@@ -1,44 +1,48 @@
-queue = []
-
-def enqueue():
-    print('enter a element')
-    element = int(input())
-    queue.append(element)
-    print(element, 'added to queue')
-    
-def dequeue():
-    if not queue:
-        print('queue is empty') 
-    else:
-        element = queue.pop(0)
-        print('removed element', element)       
-    
-def display():
-    if not queue:
-        print('queue is empty')
-    else:
-        print(queue)
+#queue working
+class queue():
+    def __init__(self):
+        self.arr = []
         
-def display_rev():
-    if not queue:
-        print('queue is empty')
-    else:
-        print(queue[::-1])        
+    def enqueue(self):
+        element = int(input('enter value'))
+        self.arr.append(element)
+        print(element,'added to queue') 
         
+    def dequeue(self):
+        if not self.arr:
+            print('queue is empty')
+        else:    
+            element = int(input('enter the object to remove'))       
+            element = self.arr.pop(0)
+            print(element, 'removed from queue')
         
-while True:
-    print('choose a option 1.enqueue 2.dequeue 3.display 4.reverse 5.quit')
+    def display(self):
+        if not self.arr:
+            print('queue is empty')
+        else:
+            print(self.arr)
+                      
+queue = queue()        
+while queue:
+    print('choose a option 1.enqueue 2.dequeue 3.display 4.quit')
     choice = int(input())
     if choice == 1:
-        enqueue()
+        queue.enqueue()
     elif choice == 2:
-        dequeue()
+        queue.dequeue()
     elif choice == 3:
-        display()
-    elif choice == 4:
-        display_rev()
-    elif choice == 5:   
+        queue.display()
+    elif choice == 4:   
         break
     else:
         print('choose any of the mentioned options')
                                  
+                                 
+ 
+                                 
+                                 
+                                 
+                                 
+
+    
+                                  

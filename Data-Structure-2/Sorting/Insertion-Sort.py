@@ -12,12 +12,5 @@ print(insertion_sort(arr))
 
 
 
-            
         
-
-            
-
-
-
-   
    

@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+# merge two unsorted array
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -22,6 +34,7 @@ def merge(left,right):
     sorted_arr.extend(right[j:])
     return sorted_arr         
 
-arr = [38, 27, 43, 3, 9, 82, 10]
-print("Sorted array:", merge_sort(arr))
+arr = [38, 27, 43,4,6,7,7]
+arr2 = [ 3, 9, 82, 10,2,5,3]       
+print("Sorted array:", merge(merge_sort(arr),merge_sort(arr2)))
     
