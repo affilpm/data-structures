@@ -1,3 +1,36 @@
+# In-Place Merge Sort
+def merge_sort(arr):
+    if len(arr)<= 1:
+        return arr
+    mid = len(arr)//2
+    left = arr[:mid]
+    right = arr[mid:]
+    merge_sort(left)
+    merge_sort(right)
+    return merge(arr, left,right)
+
+def merge(arr,left,right):
+    i = j = k = 0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            arr[k] = left[i]
+            i += 1
+        else:
+            arr[k] = right[j]
+            j += 1
+        k += 1
+        
+    while i < len(right):
+        arr[k] = left[i]
+        i += 1
+        k += 1
+    while j < len(right):
+        arr[k] = right[j]
+        j+=1
+        k+=1
+    return arr
+
+print(merge_sort([3,4,5,7,1,2,9,0]))     
 
 
 
@@ -8,8 +41,7 @@
 
 
 
-
-# merge two unsorted array
+# merge sort using new array
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -35,6 +67,5 @@ def merge(left,right):
     return sorted_arr         
 
 arr = [38, 27, 43,4,6,7,7]
-arr2 = [ 3, 9, 82, 10,2,5,3]       
-print("Sorted array:", merge(merge_sort(arr),merge_sort(arr2)))
+print("Sorted array:", merge_sort(arr))
     
