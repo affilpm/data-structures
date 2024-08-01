@@ -7,24 +7,27 @@ class HashTable:
     
     def insert(self, key, value):
         index = self.hash_function(key)
-        for pair in self.table[index]:
-            if pair[0] == key:
-                pair[1] = value
+        bucket = self.table[index]
+        for i,v in enumerate(bucket):
+            if v[0] == key:
+                bucket[i] = (key,value)
                 return
-        self.table[index].append([key, value])
+        bucket.append((key, value))
 
     def search(self, key):
         index = self.hash_function(key)
-        for pair in self.table[index]:
+        bucket = self.table[index]
+        for pair in bucket:
             if pair[0] == key:
                 return pair[1]
         return None
 
     def delete(self, key):
         index = self.hash_function(key)
-        for i, pair in enumerate(self.table[index]):
+        bucket = self.table[index]
+        for i, pair in enumerate(bucket):
             if pair[0] == key:
-                del self.table[index][i]
+                del bucket[i]
                 return
             
               
@@ -40,12 +43,16 @@ class HashTable:
             for i,v in bucket:
                 if v == value:
                     count += 1
-        return count            
+            return count            
                                
 
 ht = HashTable(10)
 ht.insert("one", "2")
 ht.insert("two", "35")
+ht.insert("three", "35")
+ht.insert("four", "35")
+ht.insert("five", "35")
+ht.insert("six", "35")
 ht.delete("two")
 
 ht.display_all()
