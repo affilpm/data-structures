@@ -54,7 +54,7 @@ print(reverse_stack([1,2,3,4,5,6]))
         
         
 # Remove middle from stack          
-def middle_stack(arr):
+def remove_middle_stack(arr):
     mid = len(arr)//2
     d = []
     for i in range(mid):
@@ -63,9 +63,22 @@ def middle_stack(arr):
     for j in range(len(d)):
         arr.append(d.pop())
     return arr
-print(middle_stack([1,2,3,4,5]))    
+print(remove_middle_stack([1,2,3,4,5]))    
 
  
    
 
-        
+
+
+# remove specific element from stack
+def remove_specific_stack(arr,n):
+    temp = []
+    while arr:
+        element = arr.pop()
+        if element != n:
+            temp.append(element)
+    while temp:
+        arr.append(n.pop())
+    return arr
+
+print(remove_specific_stack([1,2,3,4,5],3))            
