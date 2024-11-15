@@ -78,9 +78,9 @@ print(binary_search3(h,3))
 
 
 
-def doubly_recursion(arr,target,left,right):
+def binary_recursion(arr,target,left,right):
     
-    if len(arr) <= 1:
+    if left > right:
         return -1
     
     mid = left + (right - left) // 2
@@ -88,8 +88,8 @@ def doubly_recursion(arr,target,left,right):
     if arr[mid] == target:
         return mid
     if arr[mid] < target:
-        return doubly_recursion(arr,target,mid + 1,right)
+        return binary_recursion(arr,target,mid + 1,right)
     else:
-        return doubly_recursion(arr,target,left, mid - 1)
+        return binary_recursion(arr,target,left, mid - 1)
 array =  [1,2,3,4,4,5]  
-print(doubly_recursion(array, 3,0,len(array)-1))    
+print(binary_recursion(array, 3,0,len(array)-1))    

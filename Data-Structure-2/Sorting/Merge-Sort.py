@@ -20,7 +20,7 @@ def merge(arr,left,right):
             j += 1
         k += 1
         
-    while i < len(right):
+    while i < len(left):
         arr[k] = left[i]
         i += 1
         k += 1

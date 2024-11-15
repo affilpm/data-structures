@@ -95,7 +95,7 @@ class Linkedlist():
             return
         fast = self.head
         slow = self.head
-        prev = self.head
+        prev = None
         while fast and fast.next:
             fast = fast.next.next
             prev = slow
@@ -136,9 +136,9 @@ class Linkedlist():
                 break
             n = n.next
         if n is None:
-            print('no node you typed exist')
+            print("node you typed doesn't exist")
         elif n.next is None:
-            print('no node', x)    
+            print('no node after', x)    
         else:
             n.next = n.next.next            
 
@@ -158,7 +158,6 @@ class Linkedlist():
             
         if prev:
             prev.next = slow.next
-            
             
             
                 
@@ -245,7 +244,9 @@ LL1 = Linkedlist()
 LL1.add_begin(1)
 LL1.add_begin(10)
 LL1.add_begin(6)
-LL1.del_after(6)
+LL1.add_begin(6)
+
+# LL1.del_after(6)
 
 # LL1.add_begin(7)
 # LL1.add_end(6)     

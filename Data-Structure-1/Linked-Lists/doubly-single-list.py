@@ -17,6 +17,8 @@ class LinkedList:
             while n is not None:
                 print(n.data, end=' ')
                 n = n.next
+        print()
+                
                 
     def print_ll_reverse(self):
         if self.head is None:
@@ -90,8 +92,8 @@ n.add_begin(2)
 n.add_begin(1)
 # n.add_end(6)
 n.add_after(3,1)
-
+n.print_ll()    
 n.print_ll_reverse()
 
 
-n.print_ll()                        
+                    

@@ -45,7 +45,7 @@ class bst:
         return current    
         
     def delete(self,value):
-        result = []
+
         def remove(current,value):
             if current is None:
                 return current
