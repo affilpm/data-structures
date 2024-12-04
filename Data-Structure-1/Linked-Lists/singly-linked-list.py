@@ -140,7 +140,10 @@ class Linkedlist():
         elif n.next is None:
             print('no node after', x)    
         else:
-            n.next = n.next.next            
+            n.next = n.next.next 
+            
+            
+                       
 
 
 # delete node in the middle
