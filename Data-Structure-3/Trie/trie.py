@@ -24,6 +24,14 @@ class trie:
             current = current.child[i]
         return current.endofword
     
+    def remove(self, word):
+        current = self.root
+        for i in word:
+              if i not in current.child:
+                return False
+              current = current.child[i]
+        current.endofword = False
+    
     def starts_with(self,prefix):
         current = self.root
         for i in prefix:
@@ -34,5 +42,7 @@ class trie:
     
 n = trie()
 n.insert('affil')
-print(n.search('affi'))                    
-print(n.starts_with('a'))
+n.sear('affil')
+print(n.search('affil'))  
+                  
+# print(n.starts_with('a'))
