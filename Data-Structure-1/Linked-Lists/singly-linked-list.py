@@ -69,7 +69,7 @@ class Linkedlist():
             return
         if self.head.data == x:
             new_node = Node(data)
-            new_node = self.head
+            new_node.next = self.head
             self.head = new_node
             return
         n = self.head
