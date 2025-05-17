@@ -91,7 +91,7 @@ class Linkedlist():
     def add_mid(self,data):
         new_node = Node(data)
         if self.head is None :
-            self.head = new_node
+            print('list should be greater than 1')
             return
         fast = self.head
         slow = self.head

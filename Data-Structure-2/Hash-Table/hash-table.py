@@ -38,7 +38,7 @@ class HashTable:
                 print(f"Bucket {i}: {bucket}") 
                 
                 
-    def count(self,value):
+    def count_duplicate_values(self,value):
         count = 0
         for bucket in self.table:
             for i,v in bucket:
