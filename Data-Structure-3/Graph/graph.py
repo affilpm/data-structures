@@ -36,10 +36,10 @@ class Graph:
             node = queue.pop(0)  
             print(node, end=" ") 
             
-            for neighbor, weight in self.graph[node]:
-                if neighbor not in visited:
-                    visited.add(neighbor)
-                    queue.append(neighbor)
+            for neighbour, weight in self.graph[node]:
+                if neighbour not in visited:
+                    visited.add(neighbour)
+                    queue.append(neighbour)
     
     
     
